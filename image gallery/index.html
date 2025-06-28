@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('architecture')">Architecture</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <div class="gallery" id="gallery">
+
+    <!-- 🌄 Nature -->
+    <div class="gallery-item nature"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature 1" /></div>
+    <div class="gallery-item nature"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Nature 2" /></div>
+    <div class="gallery-item nature"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Nature 3" /></div>
+    <div class="gallery-item nature"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Nature 4" /></div>
+
+    <!-- 🏛️ Architecture -->
+    <div class="gallery-item architecture"><img src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455" alt="Architecture 1" /></div>
+    <div class="gallery-item architecture"><img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8" alt="Architecture 2" /></div>
+    <div class="gallery-item architecture"><img src="https://images.unsplash.com/photo-1513628253939-010e64ac66cd" alt="Architecture 3" /></div>
+    <div class="gallery-item architecture"><img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="Architecture 4" /></div> <!-- ✅ Working now -->
+
+    <!-- 🐾 Animals -->
+    <div class="gallery-item animals"><img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0" alt="Animal 1" /></div>
+    <div class="gallery-item animals"><img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d" alt="Animal 2" /></div>
+    <div class="gallery-item animals"><img src="https://images.unsplash.com/photo-1560807707-8cc77767d783" alt="Animal 3" /></div>
+    <div class="gallery-item animals"><img src="https://images.unsplash.com/photo-1574158622682-e40e69881006" alt="Animal 4" /></div>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <span class="nav prev" onclick="navigate(-1)">❮</span>
+    <img id="lightbox-img" src="" alt="" />
+    <span class="nav next" onclick="navigate(1)">❯</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
